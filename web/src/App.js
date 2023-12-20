@@ -13,8 +13,8 @@ import { FcAbout } from "react-icons/fc";
 // Import Routes:
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
-import UserList from "./pages/userList/UserList";
-import Chat from "./pages/chat/Chat";
+// import UserList from "./pages/userList/UserList";
+// import Chat from "./pages/chat/Chat";
 import Login from "./pages/login/Login";
 import Signup from "./pages/signup/Signup";
 import Profile from "./pages/profile/Profile";
@@ -30,43 +30,9 @@ import { GlobalContext } from "./context/Context";
 
 const App = () => {
   const { state, dispatch } = useContext(GlobalContext);
-  const [notifications, setNotifications] = useState([]);
 
   // const location = useLocation();
 
-  useEffect(() => {
-    const socket = io(baseUrl, {
-      secure: true,
-      withCredentials: true,
-    });
-
-    socket.on("connect", function () {
-      console.log("connected in app.js");
-    });
-    socket.on("disconnect", function (message) {
-      console.log("Socket disconnected from server: ", message);
-    });
-
-    socket.on(`NOTIFICATIONS`, (e) => {
-      const location = window.location.pathname;
-
-      console.log("new item from server: ", location);
-
-      if (!location.includes("chat")) {
-        setNotifications((prev) => {
-          return [e, ...prev];
-        });
-      }
-
-      setTimeout(() => {
-        setNotifications([]);
-      }, 10000);
-    });
-
-    return () => {
-      socket.close();
-    };
-  }, [state]);
 
   useEffect(() => {
     axios.interceptors.request.use(
@@ -123,48 +89,10 @@ const App = () => {
     }
   };
 
-  const handleCloseNotification = (index) => {
-    notifications.splice(index, 1);
-    setNotifications([...notifications]);
-  };
-
-  const handleOpenNotification = () => {
-
-  }
-
-  // const searchHandler = async (e) => {
-  //   e.preventDefault();
-  //   try {
-  //     setIsLoading(true);
-  //     const response = await axios.get(
-  //       `${baseUrl}/api/v1/search?q=${searchInputRef.current.value}`
-  //     );
-  //     console.log(response.data);
-
-  //     setIsLoading(false);
-  //     setAllPosts([...response.data]);
-  //   } catch (error) {
-  //     // handle error
-  //     console.log(error.data);
-  //     setIsLoading(false);
-  //   }
-  // };
-  
+    
   return (
     <div>
 
-      <div className="notificationWindow">
-        {notifications.map((eachNotification, index) => (
-          <div className="notification" key={index}>
-            {eachNotification}
-            <br />
-            <div>
-              <button onClick={() => { handleCloseNotification(index) }} > close </button>
-              <button onClick={handleOpenNotification}>open</button>
-            </div>
-          </div>
-        ))}
-      </div>
 
       {/* admin routes */}
       {state.isLogin === true && state.role === "admin" ? (
@@ -247,8 +175,8 @@ const App = () => {
               }
             />
             <Route path="/about" element={<About />} />
-            <Route path="/userList" element={<UserList />} />
-            <Route path="/chat/:userId" element={<Chat />} />
+            {/* <Route path="/userList" element={<UserList />} /> */}
+            {/* <Route path="/chat/:userId" element={<Chat />} /> */}
             <Route
               path="/profile/:userId"
               element={
@@ -268,7 +196,7 @@ const App = () => {
       {state.isLogin === true && state.role === "user" ? (
         <>
 
-          <nav className="home-page-header">
+          {/* <nav className="home-page-header">
             <div className="nav-first-child">
               <div className="search-bar">
                 <form action="#" style={{ textAlign: "left" }}>
@@ -276,15 +204,15 @@ const App = () => {
                     type="search"
                     className="searching"
                     placeholder="Search..."
-                    // ref={searchInputRef}
+                    ref={searchInputRef}
                   />
                   <button type="submit" hidden></button>
                 </form>
               </div>
 
-              {/* <div className="login-person-name">
+              <div className="login-person-name">
                 {state.user.firstName} {state.user.lastName}
-              </div> */}
+              </div>
               <div>
                 <button
                   class="btn btn-outline-danger logoutBtn"
@@ -294,8 +222,8 @@ const App = () => {
                 </button>
               </div>
             </div>
-          </nav>
-          <nav className="home-page-header">
+          </nav> */}
+          {/* <nav className="home-page-header">
             <div className="nav-second-child">
               <ul className="nav-bar">
                 <li className="nav-bar-list">
@@ -332,7 +260,7 @@ const App = () => {
                 </li>
               </ul>
             </div> 
-          </nav>
+          </nav> */}
           <Routes>
             <Route
               path="/"
@@ -345,8 +273,8 @@ const App = () => {
               }
             />
             <Route path="/about" element={<About />} />
-            <Route path="/userList" element={<UserList />} />
-            <Route path="/chat/:userId" element={<Chat />} />
+            {/* <Route path="/userList" element={<UserList />} /> */}
+            {/* <Route path="/chat/:userId" element={<Chat />} /> */}
             <Route
               path="/profile/:userId"
               element={

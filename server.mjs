@@ -17,8 +17,8 @@ import { globalIoObject, socketUsers } from "./core.mjs";
 // Imports Routes:
 import authRouter from "./routes/auth.mjs"; 
 import postRouter from "./routes/post.mjs"; 
-import chatRouter from "./routes/chat.mjs"; 
-import userRouter from "./routes/user.mjs"; 
+// import chatRouter from "./routes/chat.mjs"; 
+// import userRouter from "./routes/user.mjs"; 
 import unAuthProfileRoutes from "./unAuthRoutes/profile.mjs"; 
 
 // Create Database, Collections and path: 
@@ -75,8 +75,8 @@ app.use("/api/v1", (req, res, next) => { // JWT --- // bayriyar : yha sy agay na
 });
 
 app.use("/api/v1", postRouter); // Securi API --> Post-APIs
-app.use("/api/v1", chatRouter); // Securi API --> Chat-APIs
-app.use("/api/v1", userRouter); // Securi API --> User-APIs
+// app.use("/api/v1", chatRouter); // Securi API --> Chat-APIs
+// app.use("/api/v1", userRouter); // Securi API --> User-APIs
 
 
 

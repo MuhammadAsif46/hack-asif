@@ -58,11 +58,6 @@ const Login = () => {
 
   return (
     <div className="container-login">
-      <div className="first-child">
-        <div className="app-name">Social Media App</div>
-        <p className="app-text">This Social Media App Will helps you <br /> connecting with other people.</p>
-      </div>
-
       <div className="second-child">
         <form id="loginForm" onSubmit={loginSubmitHandler}>
           <input

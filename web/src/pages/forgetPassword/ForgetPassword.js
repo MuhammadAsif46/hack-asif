@@ -51,14 +51,6 @@ const ForgetPassword = () => {
 
   return (
     <div className="container-login">
-      <div className="first-child">
-        <div className="app-name">Forget Password</div>
-        <p className="app-text">
-          Enter the email address associated with your <br />
-          account. Click Next button and we'll send <br />
-          you a page to reset your password.
-        </p>
-      </div>
 
       <div className="second-child">
         <form id="loginForm" onSubmit={ForgetPasswordSubmitHandler}>

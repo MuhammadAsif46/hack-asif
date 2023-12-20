@@ -61,10 +61,6 @@ const ForgetPasswordComplete = () => {
 
   return (
     <div className="container-login">
-      <div className="first-child">
-        <div className="app-name">Reset Your Password</div>
-        <p className="app-text">Enter a new password and click update button  </p>
-      </div>
         
       <div className="second-child">
         <form id="loginForm" onSubmit={LoginSubmitHandler}>
