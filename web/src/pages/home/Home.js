@@ -469,6 +469,32 @@ export default function Home() {
               </button>
             </div>
           </header>
+
+          <main>
+            <div className="first-navBar">
+              <div className="box">Id</div>
+              <div className="box">Profile Image</div>
+              <div className="box">Name</div>
+              <div className="box">Course Name</div>
+              <div className="box">Password</div>
+            </div>
+
+            <div className="std-data">
+              <ul>
+                <li>12</li>
+                <li>hello</li>
+                <li>123445</li>
+                <li>dfdf</li>
+                <li>vcfsvbg</li>
+
+              <div>
+                <button>edit</button>
+                <button>delete</button>
+              </div>
+              </ul>
+            </div>
+
+          </main>
         </div>
       </div>
     

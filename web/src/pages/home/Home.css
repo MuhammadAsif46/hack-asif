@@ -57,14 +57,13 @@
 
 .right-side{
   margin-left: 270px;
-  background-color: #e9edc9;
 }
 
 header{
   display: flex;
   justify-content: space-between;
   padding: 0.5rem;
-  /* border: 2px solid red; */
+  background-color: #e9edc9;
 }
 
 .main-content .profile{
@@ -86,3 +85,23 @@ header{
 .add-btn span{
   padding-right: 5px;
 }
+
+.std-data{
+  border: 2px solid red;
+  padding: 0.5rem;
+}
+
+.std-data ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.first-navBar{
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid black;
+  margin-top: 20px;
+  padding: 1rem;
+}
+
