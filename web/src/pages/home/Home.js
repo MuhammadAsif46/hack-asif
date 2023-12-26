@@ -458,15 +458,15 @@ export default function Home() {
         <div className="main-content">
           <header>
             <h2>
-              <label htmlFor=""><span><FaRegCircleUser/></span></label>
-              Students
+              <span className="profile"><FaRegCircleUser/></span>
+              <span>Students</span>
             </h2>
 
             <div>
-              <buttona className="add-btn">
-                <span><CiCirclePlus/> </span>
+              <button className="add-btn">
+                <span><CiCirclePlus/></span>
                 AddStudent
-              </buttona>
+              </button>
             </div>
           </header>
         </div>
