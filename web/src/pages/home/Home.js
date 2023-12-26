@@ -429,6 +429,8 @@
 
 import { FaGraduationCap, FaRegCircleUser } from "react-icons/fa6";
 import { CgClipboard } from "react-icons/cg";
+import { CiCirclePlus } from "react-icons/ci";
+import "./Home.css";
 
 export default function Home() {
   return (
@@ -436,7 +438,7 @@ export default function Home() {
       <div className="left-side">
         <div className="sidebar">
         <div className="sidebar-brand">
-          <h1><span><FaGraduationCap /></span>Admin</h1>
+          <h2><span><FaGraduationCap /></span>Admin</h2>
         </div>
         </div>
 
@@ -455,14 +457,14 @@ export default function Home() {
       <div className="right-side">
         <div className="main-content">
           <header>
-            <h1>
+            <h2>
               <label htmlFor=""><span><FaRegCircleUser/></span></label>
               Students
-            </h1>
+            </h2>
 
             <div>
               <buttona className="add-btn">
-                <span></span>
+                <span><CiCirclePlus/> </span>
                 AddStudent
               </buttona>
             </div>
