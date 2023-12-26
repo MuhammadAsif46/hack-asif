@@ -12,7 +12,7 @@ import { FcAbout } from "react-icons/fc";
 
 // Import Routes:
 import Home from "./pages/home/Home";
-import About from "./pages/about/About";
+// import About from "./pages/about/About";
 // import UserList from "./pages/userList/UserList";
 // import Chat from "./pages/chat/Chat";
 import Login from "./pages/login/Login";
@@ -174,7 +174,7 @@ const App = () => {
                 />
               }
             />
-            <Route path="/about" element={<About />} />
+            {/* <Route path="/about" element={<About />} /> */}
             {/* <Route path="/userList" element={<UserList />} /> */}
             {/* <Route path="/chat/:userId" element={<Chat />} /> */}
             <Route
@@ -272,7 +272,7 @@ const App = () => {
                 />
               }
             />
-            <Route path="/about" element={<About />} />
+            {/* <Route path="/about" element={<About />} /> */}
             {/* <Route path="/userList" element={<UserList />} /> */}
             {/* <Route path="/chat/:userId" element={<Chat />} /> */}
             <Route

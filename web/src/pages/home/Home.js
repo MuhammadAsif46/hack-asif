@@ -41,7 +41,7 @@
 //     //     // cleanup function
 //     // }
 //   }, [toggleRefresh, alert]);
-  
+
 //   //Functions:
 //   // GET: all post users
 //   const getAllPost = async () => {
@@ -61,7 +61,6 @@
 //     }
 //   };
 
-
 //   // Sweet Alert function:
 //   const publishPost = () => {
 //     swal.fire("Success!", "Your Post have been Publish Thank you!", "success");
@@ -75,7 +74,7 @@
 //       setIsLoading(true);
 
 //       let formData = new FormData();
-      
+
 //       formData.append("text", postTextInputRef.current.value);
 //       formData.append("image", postFileInputRef.current.files[0]);
 
@@ -256,8 +255,8 @@
 //                 }} />
 //             <br />
 //             <div>
-//               {selectedImage && 
-//               <img className="post-profile-img" 
+//               {selectedImage &&
+//               <img className="post-profile-img"
 //               height={200} src={selectedImage} alt="seleted-image" /> }
 //             </div>
 //             <div className="post-footer">
@@ -353,7 +352,7 @@
 //                   </div>
 
 //                   <div>
-//                     { post.img && 
+//                     { post.img &&
 //                     <img className="set-profile-img"
 //                     width={300} src={post.img} alt="post image" /> }
 //                   </div>
@@ -410,7 +409,6 @@
 //                       Delete
 //                     </button>
 
-                    
 //                   </div>
 //                 </div>
 //               </div>
@@ -422,19 +420,56 @@
 //   );
 // }
 
-
 // // const response = await axios.post(`${baseUrl}/api/v1/post`, {
 // //   // title: postTitleInputRef.current.value,
 // //   text: postTextInputRef.current.value,
 // // });
-  
+
 // // formData.append("title", postTitleInputRef.current.value);
 
+import { FaGraduationCap, FaRegCircleUser } from "react-icons/fa6";
+import { CgClipboard } from "react-icons/cg";
 
-export default function Home (){
+export default function Home() {
   return (
     <div>
-      hello wolrdf     
+      <div className="left-side">
+        <div className="sidebar">
+        <div className="sidebar-brand">
+          <h1><span><FaGraduationCap /></span>Admin</h1>
+        </div>
+        </div>
+
+        <div className="sidebar-menu">
+        <ul>
+          <li>
+            <a href=""><span><FaRegCircleUser /></span><span>Students</span></a>
+          </li>
+          <li>
+            <a href=""><span><CgClipboard /></span><span>Attendence</span></a>
+          </li>
+        </ul>
+        </div>
+      </div>
+
+      <div className="right-side">
+        <div className="main-content">
+          <header>
+            <h1>
+              <label htmlFor=""><span><FaRegCircleUser/></span></label>
+              Students
+            </h1>
+
+            <div>
+              <buttona className="add-btn">
+                <span></span>
+                AddStudent
+              </buttona>
+            </div>
+          </header>
+        </div>
+      </div>
+    
     </div>
-  )
+  );
 }
