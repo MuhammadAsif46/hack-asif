@@ -477,21 +477,18 @@ export default function Home() {
               <div className="box">Name</div>
               <div className="box">Course Name</div>
               <div className="box">Password</div>
+              <div className="box"></div>
+              <div className="box"></div>
             </div>
 
-            <div className="std-data">
-              <ul>
-                <li>12</li>
-                <li>hello</li>
-                <li>123445</li>
-                <li>dfdf</li>
-                <li>vcfsvbg</li>
-
-              <div>
-                <button>edit</button>
-                <button>delete</button>
-              </div>
-              </ul>
+            <div className="second-navBar">
+              <div className="box">12</div>
+              <div className="box">codsco</div>
+              <div className="box">asif</div>
+              <div className="box">web and app</div>
+              <div className="box">123456</div>
+              <div className="box">123456</div>
+              <div className="box">123456</div>
             </div>
 
           </main>

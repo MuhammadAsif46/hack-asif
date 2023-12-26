@@ -105,3 +105,10 @@ header{
   padding: 1rem;
 }
 
+.second-navBar{
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid black;
+  margin-top: 20px;
+  padding: 1rem;
+}
