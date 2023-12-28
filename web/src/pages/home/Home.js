@@ -538,19 +538,43 @@ export default function Home() {
               aria-describedby="modal-modal-description"
             >
             <Box sx={style}>
-            <div className="yoyo">
-              <div className="std-form">
-                <label>First Name</label>
-                <br />
-                <input type="text" />
-              </div>
-              <div className="std-form">
-                <label>First Name</label>
-                <br />
-                <input type="text" />
-              </div>
-            </div>
-            
+              <form action="">
+                <div className="yoyo">
+                  <div className="std-form">
+                    <label>First Name</label>
+                    <br />
+                    <input type="text" />
+                  </div>
+                  <div className="std-form">
+                    <label>Last Name</label>
+                    <br />
+                    <input type="text" />
+                  </div>
+                  <div className="std-form" style={{marginTop: "20px"}}>
+                    <label>Email</label>
+                    <br />
+                    <input type="text" />
+                  </div>
+                  <div className="std-form" style={{marginTop: "20px"}}>
+                    <label>Password</label>
+                    <br />
+                    <input type="text" />
+                  </div>
+                  <div className="std-form" style={{marginTop: "20px"}}>
+                    <label>Course Name</label>
+                    <br />
+                    <input type="text" />
+                  </div>
+                  <div className="std-form" style={{marginTop: "20px"}}>
+                    <label>Phone Number</label>
+                    <br />
+                    <input type="text" />
+                  </div>
+                  <div className="add-user-btn">
+                    <button>Add User</button>
+                  </div>
+                </div>
+              </form>  
             </Box>
             </Modal>    
           </div>

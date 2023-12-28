@@ -142,9 +142,6 @@ header{
   display: flex;
 }
 
-/* .std-form{
-  border: 1px solid red;
-} */
 .std-form label{
   font-size: 1.7rem;
 }
@@ -156,6 +153,13 @@ header{
 .yoyo{
   border: 1px solid green;
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.add-user-btn{
+  border: none;
+  outline: none;
+
 }
 
 .logoutBtn{
