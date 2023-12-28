@@ -73,22 +73,7 @@ const App = () => {
   }, []);
 
   // Functions:
-  const logoutHandler = async () => {
-    try {
-      await axios.post(
-        `${baseUrl}/api/v1/logout`,
-        {},
-        {
-          withCredentials: true,
-        }
-      );
-      dispatch({
-        type: "USER_LOGOUT",
-      });
-    } catch (err) {
-      console.log(err);
-    }
-  };
+  
 
     
   return (
@@ -188,17 +173,8 @@ const App = () => {
             </div> 
           </nav> */}
           <Routes>
-            <Route
-              path="/"
-              element={
-                <Home
-                  profileImg={profileImg}
-                  userName={`${state.user.firstName} ${state.user.lastName}`}
-                  // email={state.user.email}
-                />
-              }
-            />
-            {/* <Route path="/about" element={<About />} /> */}
+            <Route path="/" element={<Home/>} />
+            <Route path="/attendence" element={<Attendence />} />
             {/* <Route path="/userList" element={<UserList />} /> */}
             {/* <Route path="/chat/:userId" element={<Chat />} /> */}
             <Route

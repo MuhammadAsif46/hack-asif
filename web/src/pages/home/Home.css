@@ -141,3 +141,30 @@ header{
 .edit-del{
   display: flex;
 }
+
+/* .std-form{
+  border: 1px solid red;
+} */
+.std-form label{
+  font-size: 1.7rem;
+}
+
+.std-form input{
+  font-size: 20px;
+}
+
+.yoyo{
+  border: 1px solid green;
+  display: flex;
+}
+
+.logoutBtn{
+  border: none;
+  background-color: #dd2f6e;
+  color: #fff;
+  font-size: 1.7rem;
+}
+.abc{
+  position: absolute;
+  top: 85%;
+}

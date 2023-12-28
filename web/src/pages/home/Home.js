@@ -1,12 +1,13 @@
 // // Import react:
-// import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useContext } from "react";
 
 // // Import data from files:
-// import { baseUrl } from "../../core";
+import { baseUrl } from "../../core";
 // import "./Home.css";
 
 // // Import Libraries:
-// import axios from "axios";
+import axios from "axios";
+
 // import { Navigate, useNavigate } from "react-router-dom";
 // import { GoFileMedia } from "react-icons/go";
 // import { BsCalendarEvent } from "react-icons/bs";
@@ -427,6 +428,8 @@
 
 // // formData.append("title", postTitleInputRef.current.value);
 
+
+import { GlobalContext } from "../../context/Context";
 import { FaGraduationCap, FaRegCircleUser } from "react-icons/fa6";
 import { CgClipboard } from "react-icons/cg";
 import { CiCirclePlus,CiEdit } from "react-icons/ci";
@@ -435,7 +438,54 @@ import { Link } from "react-router-dom";
 import newImage from "./../../assets/Nature.jpg";
 import "./Home.css";
 
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal';
+
+
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 600,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+  
+};
+
 export default function Home() {
+  const { state, dispatch } = useContext(GlobalContext);
+
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+  const logoutHandler = async () => {
+    try {
+      await axios.post(
+        `${baseUrl}/api/v1/logout`,
+        {},
+        {
+          withCredentials: true,
+        }
+      );
+      dispatch({
+        type: "USER_LOGOUT",
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  // const addStudentHandler = () => {
+  //   console.log("hello");
+  // }
+
   return (
     <div>
       <div className="left-side">
@@ -455,6 +505,13 @@ export default function Home() {
           </li>
         </ul>
         </div>
+
+        <div className="sidebar">
+          <div className="sidebar-brand abc">
+            <button className="logoutBtn" onClick={logoutHandler}>Logout</button>
+          </div>
+        </div>
+
       </div>
 
       <div className="right-side">
@@ -466,12 +523,37 @@ export default function Home() {
             </h2>
 
             <div>
-              <button className="add-btn">
+              <button className="add-btn" onClick={handleOpen}>
                 <span><CiCirclePlus/></span>
                 AddStudent
               </button>
             </div>
           </header>
+
+          <div>
+            <Modal
+              open={open}
+              onClose={handleClose}
+              aria-labelledby="modal-modal-title"
+              aria-describedby="modal-modal-description"
+            >
+            <Box sx={style}>
+            <div className="yoyo">
+              <div className="std-form">
+                <label>First Name</label>
+                <br />
+                <input type="text" />
+              </div>
+              <div className="std-form">
+                <label>First Name</label>
+                <br />
+                <input type="text" />
+              </div>
+            </div>
+            
+            </Box>
+            </Modal>    
+          </div>
 
           <main>
             <div className="first-navBar">
