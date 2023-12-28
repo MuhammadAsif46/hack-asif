@@ -151,15 +151,38 @@ header{
 }
 
 .yoyo{
-  border: 1px solid green;
+  /* border: 1px solid green; */
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 .add-user-btn{
-  border: none;
-  outline: none;
+  margin-top: 30px;
+  display: flex;
+  border: 1px solid #3e6dc4;
+  color: #fff;
+  position: relative;
+  left: 41%;
+  border-radius: 5px;
+}
+.new{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 20px;
 
+}
+
+.camera-man{
+  position: absolute;
+    top: 20%;
+    left: 55%;
+    font-size: 1.5rem;
+}
+
+.dd{
+  display: flex;
+  justify-content: center;
 }
 
 .logoutBtn{

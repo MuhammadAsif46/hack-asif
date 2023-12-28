@@ -436,13 +436,16 @@ import { CiCirclePlus,CiEdit } from "react-icons/ci";
 import { MdOutlineDelete } from "react-icons/md";
 import { Link } from "react-router-dom";
 import newImage from "./../../assets/Nature.jpg";
+import newProfile from "./../../assets/profile2.jpg";
+
 import "./Home.css";
 
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+// import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import { FaCamera } from "react-icons/fa";
 
 
 const style = {
@@ -452,7 +455,7 @@ const style = {
   transform: 'translate(-50%, -50%)',
   width: 600,
   bgcolor: 'background.paper',
-  border: '2px solid #000',
+  // border: '2px solid #000',
   boxShadow: 24,
   p: 4,
   
@@ -539,39 +542,43 @@ export default function Home() {
             >
             <Box sx={style}>
               <form action="">
-                <div className="yoyo">
+                <div className="dd">
+                  <img className="new" src={newProfile} alt="new-img" />
+                  <span className="camera-man"><FaCamera/></span>
+                </div>
+                <div className="yoyo"> 
                   <div className="std-form">
                     <label>First Name</label>
                     <br />
-                    <input type="text" />
+                    <input type="text" required/>
                   </div>
                   <div className="std-form">
                     <label>Last Name</label>
                     <br />
-                    <input type="text" />
+                    <input type="text" required/>
                   </div>
                   <div className="std-form" style={{marginTop: "20px"}}>
                     <label>Email</label>
                     <br />
-                    <input type="text" />
+                    <input type="email" required/>
                   </div>
                   <div className="std-form" style={{marginTop: "20px"}}>
                     <label>Password</label>
                     <br />
-                    <input type="text" />
+                    <input type="password" required/>
                   </div>
                   <div className="std-form" style={{marginTop: "20px"}}>
                     <label>Course Name</label>
                     <br />
-                    <input type="text" />
+                    <input type="text" required/>
                   </div>
                   <div className="std-form" style={{marginTop: "20px"}}>
                     <label>Phone Number</label>
                     <br />
-                    <input type="text" />
+                    <input type="number" required/>
                   </div>
                   <div className="add-user-btn">
-                    <button>Add User</button>
+                    <Button >Add User</Button>
                   </div>
                 </div>
               </form>  
