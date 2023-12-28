@@ -429,7 +429,10 @@
 
 import { FaGraduationCap, FaRegCircleUser } from "react-icons/fa6";
 import { CgClipboard } from "react-icons/cg";
-import { CiCirclePlus } from "react-icons/ci";
+import { CiCirclePlus,CiEdit } from "react-icons/ci";
+import { MdOutlineDelete } from "react-icons/md";
+import { Link } from "react-router-dom";
+import newImage from "./../../assets/Nature.jpg";
 import "./Home.css";
 
 export default function Home() {
@@ -445,10 +448,10 @@ export default function Home() {
         <div className="sidebar-menu">
         <ul>
           <li>
-            <a href=""><span><FaRegCircleUser /></span><span>Students</span></a>
+            <Link to={"/"}><span><FaRegCircleUser /></span><span>Students</span></Link>
           </li>
           <li>
-            <a href=""><span><CgClipboard /></span><span>Attendence</span></a>
+            <Link to={"/attendence"}><span><CgClipboard /></span><span>Attendence</span></Link>
           </li>
         </ul>
         </div>
@@ -482,14 +485,44 @@ export default function Home() {
             </div>
 
             <div className="second-navBar">
-              <div className="box">12</div>
-              <div className="box">codsco</div>
+              <div className="box">11</div>
+              <div className="box">
+                <img className="std-img" src={newImage} alt="new-image" />
+              </div>
               <div className="box">asif</div>
               <div className="box">web and app</div>
               <div className="box">123456</div>
               <div className="edit-del">
-                <div>123</div>
-                <div>321</div>
+                <div className="edit-icon"><CiEdit/></div>
+                <div className="del-icon"><MdOutlineDelete/></div>
+              </div>
+            </div>
+
+            <div className="second-navBar">
+              <div className="box">12</div>
+              <div className="box">
+                <img className="std-img" src={newImage} alt="new-image" />
+              </div>
+              <div className="box">asim</div>
+              <div className="box">techno kids</div>
+              <div className="box">118888</div>
+              <div className="edit-del">
+              <div className="edit-icon"><CiEdit/></div>
+                <div className="del-icon"><MdOutlineDelete/></div>
+              </div>
+            </div>
+
+            <div className="second-navBar">
+              <div className="box">13</div>
+              <div className="box">
+                <img className="std-img" src={newImage} alt="new-image" />
+              </div>
+              <div className="box">ahmed</div>
+              <div className="box">graphics</div>
+              <div className="box">112233</div>
+              <div className="edit-del">
+              <div className="edit-icon"><CiEdit/></div>
+                <div className="del-icon"><MdOutlineDelete/></div>
               </div>
             </div>
 
