@@ -34,21 +34,21 @@ const App = () => {
   // const location = useLocation();
 
 
-  useEffect(() => {
-    axios.interceptors.request.use(
-      function (config) {
-        console.log(config);
+  // useEffect(() => {
+  //   axios.interceptors.request.use(
+  //     function (config) {
+  //       console.log(config);
 
-        config.withCredentials = true;
-        // Do something before request is sent
-        return config;
-      },
-      function (error) {
-        // Do something with request error
-        return Promise.reject(error);
-      }
-    );
-  }, []);
+  //       config.withCredentials = true;
+  //       // Do something before request is sent
+  //       return config;
+  //     },
+  //     function (error) {
+  //       // Do something with request error
+  //       return Promise.reject(error);
+  //     }
+  //   );
+  // }, []);
 
   useEffect(() => {
     const checkLoginStatus = async () => {
@@ -97,7 +97,7 @@ const App = () => {
       {/* admin routes */}
       {state.isLogin === true && state.role === "admin" ? (
         <>
-          <nav className="home-page-header">
+          {/* <nav className="home-page-header">
             <div className="nav-first-child">
               <div className="search-bar">
                 <form action="#" style={{ textAlign: "left" }}>
@@ -105,15 +105,15 @@ const App = () => {
                     type="search"
                     className="searching"
                     placeholder="Search..."
-                    // ref={searchInputRef}
+                    ref={searchInputRef}
                   />
                   <button type="submit" hidden></button>
                 </form>
               </div>
 
-              {/* <div className="login-person-name">
+              <div className="login-person-name">
                 {state.user.firstName} {state.user.lastName}
-              </div> */}
+              </div>
               <div>
                 <button
                   class="btn btn-outline-danger logoutBtn"
@@ -161,7 +161,7 @@ const App = () => {
                 </li>
               </ul>
             </div> 
-          </nav>
+          </nav> */}
 
           <Routes>
             <Route

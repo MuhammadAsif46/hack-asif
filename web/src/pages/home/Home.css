@@ -112,3 +112,12 @@ header{
   margin-top: 20px;
   padding: 1rem;
 }
+.box1{
+  border: 1px solid black;
+  margin-right: 4rem;
+}
+
+.edit-del{
+  border: 1px solid black;
+  display: flex;
+}

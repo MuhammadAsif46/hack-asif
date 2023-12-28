@@ -477,8 +477,8 @@ export default function Home() {
               <div className="box">Name</div>
               <div className="box">Course Name</div>
               <div className="box">Password</div>
-              <div className="box"></div>
-              <div className="box"></div>
+              <div className="box1"></div>
+              {/* <div className="box"></div> */}
             </div>
 
             <div className="second-navBar">
@@ -487,8 +487,10 @@ export default function Home() {
               <div className="box">asif</div>
               <div className="box">web and app</div>
               <div className="box">123456</div>
-              <div className="box">123456</div>
-              <div className="box">123456</div>
+              <div className="edit-del">
+                <div>123</div>
+                <div>321</div>
+              </div>
             </div>
 
           </main>
